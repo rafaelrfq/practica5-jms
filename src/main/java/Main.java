@@ -1,6 +1,7 @@
 import org.apache.activemq.broker.BrokerService;
 
 import javax.jms.JMSException;
+import java.util.concurrent.TimeUnit;
 
 public class Main {
 
@@ -27,8 +28,8 @@ public class Main {
             if(idDisp > 0){
                 for(int i=0; i<5; i++){
                     System.out.println("Iniciando productor...");
+                    TimeUnit.SECONDS.sleep(10);
                     new Productor().enviarMensaje("notificacion_sensores", idDisp);
-                    Thread.sleep(2000);
                 }
                 return;
             } else {
