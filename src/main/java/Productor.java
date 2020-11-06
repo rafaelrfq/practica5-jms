@@ -15,8 +15,7 @@ public class Productor {
         Topic topic = session.createTopic(cola);
         MessageProducer producer = session.createProducer(topic);
 
-        Mensaje msg = new Mensaje();
-        msg.setIdDispositivo(idDisp);
+        Mensaje msg = new Mensaje(idDisp);
 
         TextMessage message = session.createTextMessage(msg.getJson());
         producer.send(message);

@@ -10,9 +10,9 @@ public class Mensaje {
     private float temperatura;
     private float humedad;
 
-    public Mensaje(){
+    public Mensaje(int idDispositivo){
         this.fechaGeneracion = LocalDateTime.now();
-        this.idDispositivo = 1;
+        this.idDispositivo = idDispositivo;
         this.temperatura = generarRandom();
         this.humedad = generarRandom();
     }
