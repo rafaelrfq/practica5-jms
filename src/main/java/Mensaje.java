@@ -42,7 +42,7 @@ public class Mensaje {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode mensaje = mapper.createObjectNode();
         mensaje.put("fechaGeneracion", fechaGeneracion.toString());
-        mensaje.put("idDispositivo", 1);
+        mensaje.put("idDispositivo", idDispositivo);
         mensaje.put("temperatura", temperatura);
         mensaje.put("humedad", humedad);
 
